@@ -6,8 +6,6 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
-    base: '/goit-js-hw-10/', // 👈 добавлено для GitHub Pages
-
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -15,11 +13,7 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-         input: {
-          index: './src/index.html',
-          timer: './src/1-timer.html',
-          snackbar: './src/2-snackbar.html',
-        },
+        input: glob.sync('./src/*.html'),
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
