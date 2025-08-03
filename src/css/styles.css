@@ -16,3 +16,39 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/* Центрирование по экрану */
+.nav-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* Элементы списка */
+.nav-item {
+  margin: 15px 0;
+}
+
+/* Ссылки */
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 12px 24px;
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффекты при наведении */
+.nav-link:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
